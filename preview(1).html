@@ -1,0 +1,775 @@
+
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>برای کیانای من ❤️</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800&display=swap');
+
+:root {
+  --pink: #ff5c93;
+  --rose: #ff8fb3;
+  --bg: #100711;
+  --card: rgba(255,255,255,.055);
+  --muted: #bba5b6;
+}
+
+* { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  margin: 0;
+  background:
+    radial-gradient(ellipse at 50% 0%, #42132e 0%, transparent 45%),
+    radial-gradient(ellipse at 0% 60%, #241026 0%, transparent 40%),
+    var(--bg);
+  color: #fff1f6;
+  font-family: 'Vazirmatn', Tahoma, sans-serif;
+  overflow-x: hidden;
+}
+
+button, input { font: inherit; }
+
+button { cursor: pointer; }
+
+a { color: inherit; text-decoration: none; }
+
+#particles {
+  position: fixed;
+  inset: 0;
+  pointer-events: none;
+  overflow: hidden;
+  z-index: 0;
+}
+
+.heart {
+  position: absolute;
+  bottom: -50px;
+  color: rgba(255, 92, 147, .5);
+  animation: floatUp linear infinite;
+  filter: drop-shadow(0 0 8px #ff477d55);
+}
+
+@keyframes floatUp {
+  from { transform: translateY(0) rotate(0deg); opacity: 0; }
+  10% { opacity: .8; }
+  90% { opacity: .6; }
+  to { transform: translateY(-115vh) rotate(35deg); opacity: 0; }
+}
+
+main, header, footer { position: relative; z-index: 1; }
+
+.hero {
+  min-height: 100svh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 70px 22px;
+  text-align: center;
+}
+
+.eyebrow {
+  color: var(--rose);
+  letter-spacing: 3px;
+  font-size: 12px;
+  margin-bottom: 25px;
+}
+
+.big-heart {
+  font-size: 75px;
+  line-height: 1.3;
+  animation: heartbeat 1.8s infinite;
+  filter: drop-shadow(0 0 30px #ff3f7b88);
+}
+
+@keyframes heartbeat {
+  0%, 100% { transform: scale(1); }
+  12% { transform: scale(1.13); }
+  24% { transform: scale(1); }
+  36% { transform: scale(1.08); }
+}
+
+h1 {
+  font-size: clamp(36px, 8vw, 76px);
+  margin: 18px 0;
+  font-weight: 800;
+  background: linear-gradient(110deg, #fff, #ff83ae, #ffdae8);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.hero p {
+  color: #d7bdcc;
+  line-height: 2.2;
+  max-width: 580px;
+  font-size: 15px;
+}
+
+.btn {
+  border: 1px solid #ff80aa88;
+  color: white;
+  background: linear-gradient(120deg, #a82b5c, #f45188);
+  border-radius: 999px;
+  padding: 14px 27px;
+  box-shadow: 0 8px 30px #ff337b22;
+  transition: .25s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 35px #ff337b55;
+}
+
+.btn.secondary {
+  background: #ffffff09;
+  border-color: #ffffff25;
+}
+
+.hero .btn { margin-top: 25px; }
+
+.scroll-hint {
+  position: absolute;
+  bottom: 22px;
+  color: #9f8395;
+  font-size: 12px;
+  animation: bob 2s infinite;
+}
+
+@keyframes bob {
+  50% { transform: translateY(7px); }
+}
+
+.section {
+  max-width: 1050px;
+  margin: auto;
+  padding: 80px 20px;
+}
+
+.section-title {
+  text-align: center;
+  font-size: clamp(27px, 5vw, 42px);
+  margin: 0 0 14px;
+}
+
+.section-subtitle {
+  text-align: center;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 2;
+  margin: 0 auto 38px;
+  max-width: 620px;
+}
+
+.letter {
+  max-width: 760px;
+  margin: auto;
+  border: 1px solid #ff83ad33;
+  border-radius: 25px;
+  background: linear-gradient(135deg, #ffffff0b, #ff5c9310);
+  padding: clamp(25px, 6vw, 50px);
+  box-shadow: 0 20px 80px #0003;
+  line-height: 2.5;
+  color: #f4dfe9;
+  position: relative;
+  overflow: hidden;
+}
+
+.letter::before {
+  content: "♡";
+  position: absolute;
+  left: 12px;
+  top: -50px;
+  font-size: 180px;
+  color: #ff5c930b;
+  pointer-events: none;
+}
+
+.letter h3 {
+  color: var(--rose);
+  font-size: 22px;
+  margin-top: 0;
+}
+
+.signature {
+  color: #ff9cbd;
+  text-align: left;
+  font-weight: 700;
+  margin-top: 25px;
+}
+
+.stats {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 35px 0;
+}
+
+.stat {
+  min-width: 130px;
+  border: 1px solid #ff8fb326;
+  background: #ffffff07;
+  border-radius: 18px;
+  padding: 20px 25px;
+  text-align: center;
+}
+
+.stat strong {
+  display: block;
+  color: var(--rose);
+  font-size: 28px;
+}
+
+.stat span {
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.progress-wrap {
+  max-width: 550px;
+  margin: 0 auto 30px;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  color: #e9cad8;
+  font-size: 12px;
+  margin-bottom: 10px;
+}
+
+.progress-track {
+  height: 7px;
+  background: #ffffff12;
+  border-radius: 99px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #c52d69, #ff9abc);
+  border-radius: 99px;
+  transition: width .35s;
+}
+
+.toolbar {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 25px;
+}
+
+.search {
+  flex: 1 1 220px;
+  max-width: 380px;
+  padding: 13px 17px;
+  color: white;
+  background: #ffffff09;
+  border: 1px solid #ffffff20;
+  border-radius: 13px;
+  outline: none;
+  min-width: 0;
+}
+
+.search:focus { border-color: var(--pink); }
+
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-bottom: 28px;
+}
+
+.filter {
+  padding: 9px 16px;
+  color: #d8bdcc;
+  border: 1px solid #ffffff20;
+  background: #ffffff07;
+  border-radius: 99px;
+  font-size: 12px;
+  transition: .2s;
+}
+
+.filter.active, .filter:hover {
+  color: white;
+  background: #e33d79;
+  border-color: #ff8db4;
+}
+
+.reasons {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.reason {
+  min-height: 88px;
+  padding: 15px 10px;
+  border: 1px solid #ffffff12;
+  border-radius: 17px;
+  background: var(--card);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  transition: transform .25s, border-color .25s, background .25s;
+  animation: appear .35s both;
+}
+
+@keyframes appear {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.reason:hover {
+  transform: translateY(-4px);
+  border-color: #ff76a5aa;
+  background: #ff5c9313;
+}
+
+.reason.done {
+  border-color: #ff6c9a99;
+  background: #ff3d7b1a;
+}
+
+.reason .number {
+  color: #96768a;
+  font-size: 10px;
+}
+
+.reason .word {
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.reason .mark {
+  font-size: 12px;
+  color: var(--pink);
+}
+
+.empty {
+  display: none;
+  text-align: center;
+  color: var(--muted);
+  padding: 30px;
+}
+
+.final {
+  text-align: center;
+  padding: 100px 20px 120px;
+}
+
+.final .big-heart { font-size: 65px; }
+
+.final h2 {
+  font-size: clamp(30px, 7vw, 58px);
+  color: #ffb0ca;
+  margin: 22px 0;
+}
+
+.final p {
+  color: #d4b7c7;
+  line-height: 2.3;
+}
+
+footer {
+  border-top: 1px solid #ffffff12;
+  padding: 25px;
+  text-align: center;
+  color: #92788a;
+  font-size: 11px;
+}
+
+.toast {
+  position: fixed;
+  z-index: 10;
+  bottom: 25px;
+  left: 50%;
+  transform: translate(-50%, 20px);
+  opacity: 0;
+  background: #351322;
+  border: 1px solid #ff8db455;
+  padding: 12px 20px;
+  border-radius: 14px;
+  transition: .3s;
+  pointer-events: none;
+  white-space: nowrap;
+}
+
+.toast.show {
+  opacity: 1;
+  transform: translate(-50%, 0);
+}
+
+@media (max-width: 750px) {
+  .reasons { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+  .section { padding: 65px 15px; }
+}
+
+@media (max-width: 430px) {
+  .reasons { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .reason { min-height: 83px; }
+  .hero p { font-size: 14px; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    scroll-behavior: auto !important;
+  }
+}
+</style>
+</head>
+
+<body>
+<div id="particles" aria-hidden="true"></div>
+
+<main>
+  <section class="hero" id="home">
+    <div class="eyebrow">A LITTLE WORLD MADE FOR YOU</div>
+    <div class="big-heart">♥</div>
+    <h1>برای کیانای من</h1>
+    <p>
+      اگه قرار بود تمام دوست داشتنم رو بنویسم،
+      شاید هیچ صفحه‌ای برای تموم شدنش کافی نبود.
+      <br>
+      ولی اینجا، یه گوشه‌ی کوچیک از قلبمه که فقط برای توئه.
+    </p>
+    <button class="btn" onclick="document.querySelector('#letter').scrollIntoView({behavior:'smooth'})">
+      وارد دنیای من شو ♡
+    </button>
+    <div class="scroll-hint">کمی پایین‌تر، برای تو ↓</div>
+  </section>
+
+  <section class="section" id="letter">
+    <h2 class="section-title">یه حرف از ته قلبم</h2>
+    <p class="section-subtitle">چیزهایی که شاید هیچ‌وقت نتونم همشون رو یک‌جا بهت بگم.</p>
+
+    <div class="letter">
+      <h3>کیانای قشنگم،</h3>
+      نمی‌دونم چطور می‌شه همه‌ی دوست داشتنت رو توی کلمه‌ها جا داد.
+      نمی‌دونم از کجا باید شروع کنم؛ از قشنگی‌هات، از اخلاق دوست‌داشتنیت،
+      از خنده‌هات یا از اون چیزهای کوچیکی که شاید خودت حتی متوجهشون نباشی.
+
+      <br><br>
+
+      من فقط یه قسمت از تو رو دوست ندارم.
+      لازم نیست یه ویژگی خاص داشته باشی تا دوستت داشته باشم.
+      من خودِ تو رو دوست دارم؛ با همه‌ی قشنگی‌هات، اخلاق‌هات،
+      شیطنت‌هات، لجبازی‌هات و تمام چیزهایی که تو رو تبدیل به خودت می‌کنن.
+
+      <br><br>
+
+      این ۳۰۰ تا دلیل قرار نیست اندازه‌ی دوست داشتنم باشن.
+      فقط ۳۰۰ تا بهونه‌ان برای گفتن چیزی که ته نداره.
+
+      <div class="signature">از طرف کسی که همه‌ی تو رو دوست داره ❤️</div>
+    </div>
+  </section>
+
+  <section class="section" id="reasons">
+    <h2 class="section-title">۳۰۰ تا بهونه برای دوست داشتنت</h2>
+    <p class="section-subtitle">
+      روی هر کدوم بزن تا علامت بخوره. این‌ها فقط چند کلمه‌ان
+      برای توصیف قشنگی‌ها و اخلاق‌های تو، کیانای من.
+    </p>
+
+    <div class="stats">
+      <div class="stat">
+        <strong>۳۰۰</strong>
+        <span>بهونه‌ی دوست داشتنت</span>
+      </div>
+      <div class="stat">
+        <strong id="doneCount">۰</strong>
+        <span>دلیل انتخاب‌شده</span>
+      </div>
+      <div class="stat">
+        <strong id="percent">۰٪</strong>
+        <span>از فهرست</span>
+      </div>
+    </div>
+
+    <div class="progress-wrap">
+      <div class="progress-label">
+        <span>قدم‌به‌قدم، برای تو</span>
+        <span id="progressText">۰ از ۳۰۰</span>
+      </div>
+      <div class="progress-track">
+        <div class="progress-bar" id="progressBar"></div>
+      </div>
+    </div>
+
+    <div class="toolbar">
+      <input id="search" class="search" type="search"
+             placeholder="بین قشنگی‌هات بگرد... ♡"
+             aria-label="جست‌وجو بین دلیل‌ها">
+      <button class="btn secondary" id="showAll">نمایش همه</button>
+      <button class="btn secondary" id="showDone">انتخاب‌شده‌ها</button>
+    </div>
+
+    <div class="filters" id="filters">
+      <button class="filter active" data-category="همه">همه</button>
+      <button class="filter" data-category="ظاهر">قشنگی‌هات</button>
+      <button class="filter" data-category="شخصیت">اخلاق‌هات</button>
+      <button class="filter" data-category="رفتار">رفتارهای تو</button>
+      <button class="filter" data-category="حس">حسی که می‌دی</button>
+    </div>
+
+    <div class="reasons" id="reasonsGrid"></div>
+    <div class="empty" id="empty">چیزی پیدا نشد، قشنگم ♡</div>
+  </section>
+
+  <section class="final">
+    <div class="big-heart">♡</div>
+    <h2>همه‌ی تو، برای همیشه</h2>
+    <p>
+      حتی اگه هزار بار دیگه هم ازت بپرسن چرا دوستش داری،
+      <br>
+      هزار دلیل دیگه پیدا می‌کنم.
+      <br>
+      چون دوست داشتن تو به ۳۰۰ تا دلیل محدود نمی‌شه.
+    </p>
+    <h2>جونم برای تو ❤️</h2>
+  </section>
+</main>
+
+<footer>
+  ساخته‌شده با عشق، فقط برای کیانا ♡
+</footer>
+
+<div class="toast" id="toast">این یکی هم از قشنگی‌های توئه ❤️</div>
+
+<script>
+const rawReasons = [
+["چشمات","ظاهر"],["نگاهت","ظاهر"],["لبخندت","ظاهر"],["خنده‌هات","ظاهر"],
+["صورتت","ظاهر"],["قشنگیت","ظاهر"],["جذابیتت","ظاهر"],["صدات","ظاهر"],
+["استایلت","ظاهر"],["حالت چشمات","ظاهر"],["حالت لبخندت","ظاهر"],["چهره‌ت","ظاهر"],
+["نازت","ظاهر"],["دلبر بودنت","ظاهر"],["جذاب بودنت","ظاهر"],["ظرافتت","ظاهر"],
+["لطافت چهره‌ت","ظاهر"],["حالت صورتت","ظاهر"],["نگاه قشنگت","ظاهر"],["لبخند شیرینت","ظاهر"],
+["خنده‌ی قشنگت","ظاهر"],["خوشگلی طبیعی‌ت","ظاهر"],["دلنشین بودنت","ظاهر"],["خاص بودنت","ظاهر"],
+["قشنگی چهره‌ت","ظاهر"],["جذابیت نگاهت","ظاهر"],["زیبایی لبخندت","ظاهر"],["حالت خندیدنت","ظاهر"],
+["وقتی می‌خندی","ظاهر"],["وقتی لبخند می‌زنی","ظاهر"],["وقتی نگام می‌کنی","ظاهر"],["وقتی ذوق می‌کنی","ظاهر"],
+["وقتی خوشحالی","ظاهر"],["وقتی می‌خندی از ته دل","ظاهر"],["قشنگی حالت‌هات","ظاهر"],["ناز نگاهت","ظاهر"],
+["دلبر بودن چهره‌ت","ظاهر"],["شیرینی صورتت","ظاهر"],["زیبایی طبیعی‌ت","ظاهر"],["قشنگی لبخندت","ظاهر"],
+["حالت نگاهت","ظاهر"],["جذابیت چهره‌ت","ظاهر"],["دلنشینی صدات","ظاهر"],["قشنگی خنده‌هات","ظاهر"],
+["حالت حرف زدنت","ظاهر"],["استایل خاصت","ظاهر"],["سلیقه‌ت","ظاهر"],["خوش‌پوش بودنت","ظاهر"],
+["وقتی مرتب و آراسته‌ای","ظاهر"],["وقتی با ذوقی","ظاهر"],["قشنگی حالت چشمات","ظاهر"],
+["مهربونیت","شخصیت"],["شیطونیت","شخصیت"],["بامزگیت","شخصیت"],["صداقتت","شخصیت"],
+["معرفتت","شخصیت"],["لطافتت","شخصیت"],["شیرین‌زبونیت","شخصیت"],["لجبازیت","شخصیت"],
+["دل پاکت","شخصیت"],["احساست","شخصیت"],["وفاداریت","شخصیت"],["صبوریت","شخصیت"],
+["فهمیدگیت","شخصیت"],["درکت","شخصیت"],["خوش‌قلبیت","شخصیت"],["خوش‌اخلاقیت","شخصیت"],
+["شوخ‌طبعیت","شخصیت"],["دلرحم بودنت","شخصیت"],["بااحساس بودنت","شخصیت"],["واقعی بودنت","شخصیت"],
+["خودت بودنت","شخصیت"],["خاص بودنت","شخصیت"],["اعتمادبه‌نفست","شخصیت"],["قوی بودنت","شخصیت"],
+["نرم‌دلی‌ت","شخصیت"],["خلوصت","شخصیت"],["پاکی دلت","شخصیت"],["انرژیت","شخصیت"],
+["جذابیت شخصیتت","شخصیت"],["روح قشنگت","شخصیت"],["دلنشین بودنت","شخصیت"],["خوش‌فکریت","شخصیت"],
+["باهوش بودنت","شخصیت"],["زرنگ بودنت","شخصیت"],["حساس بودنت","شخصیت"],["عمیق بودنت","شخصیت"],
+["مستقل بودنت","شخصیت"],["محکم بودنت","شخصیت"],["آرامشت","شخصیت"],["پرشور بودنت","شخصیت"],
+["صمیمیتت","شخصیت"],["راحت بودنت با خودت","شخصیت"],["بی‌ریا بودنت","شخصیت"],["صداقت نگاهت","شخصیت"],
+["معصومیتت","شخصیت"],["نازنین بودنت","شخصیت"],["عزیز بودنت","شخصیت"],["دوست‌داشتنی بودنت","شخصیت"],
+["تک بودنت","شخصیت"],["بی‌نظیر بودنت","شخصیت"],["حرف‌های بامزه‌ت","رفتار"],
+["شیطنت‌هات","رفتار"],["خنده‌هات","رفتار"],["ذوق کردنت","رفتار"],["قهر کردنت","رفتار"],
+["آشتی کردنت","رفتار"],["لوس شدنت","رفتار"],["ناز کردنت","رفتار"],["غر زدنت","رفتار"],
+["خجالت کشیدنت","رفتار"],["خوشحال شدنت","رفتار"],["تعجب کردنت","رفتار"],["هیجان‌زده شدنت","رفتار"],
+["سکوتت","رفتار"],["حرف زدنت","رفتار"],["تعریف کردنت","رفتار"],["توجهت","رفتار"],
+["دلجویی کردنت","رفتار"],["نگران شدنت","رفتار"],["خندوندنت","رفتار"],["شوخی‌هات","رفتار"],
+["تیکه انداختنت","رفتار"],["جواب دادنت","رفتار"],["پیام‌هات","رفتار"],["اسم صدا کردنت","رفتار"],
+["ناز حرف زدنت","رفتار"],["قشنگ توضیح دادنت","رفتار"],["ذوق‌زدگی‌هات","رفتار"],["واکنش‌هات","رفتار"],
+["غافلگیر شدنت","رفتار"],["حرف‌های یهویی‌ت","رفتار"],["ساده حرف زدنت","رفتار"],["بچه‌گونه شدنت","رفتار"],
+["جدی شدنت","رفتار"],["اصرارت","رفتار"],["نظر دادنت","رفتار"],["بحث کردنت","رفتار"],
+["توضیح دادنت","رفتار"],["خاطره تعریف کردنت","رفتار"],["خندیدن به شوخی‌هام","رفتار"],["خوش‌برخورد بودنت","رفتار"],
+["احوال‌پرسیت","رفتار"],["یادآوری‌هات","رفتار"],["توجه به جزئیات","رفتار"],["سلیقه نشون دادنت","رفتار"],
+["از ته دل خندیدنت","رفتار"],["وقتی هیجان داری","رفتار"],["وقتی ناز می‌کنی","رفتار"],["وقتی شوخی می‌کنی","رفتار"],
+["وقتی جدی می‌شی","رفتار"],["وقتی ذوق داری","رفتار"],["وقتی حرف دلت رو می‌زنی","رفتار"],["وقتی خودتونی","رفتار"],
+["حس خوبت","حس"],["آرامشت","حس"],["شوقی که می‌دی","حس"],["دلتنگی‌ت","حس"],
+["حس امنیتت","حس"],["گرمای حضورت","حس"],["حال خوبت","حس"],["انرژی قشنگت","حس"],
+["اثر حضورت","حس"],["خاطره‌ساز بودنت","حس"],["خاص بودنت برای من","حس"],["جایگاهت","حس"],
+["ارزشمند بودنت","حس"],["عزیز بودنت برای من","حس"],["حس نزدیکی‌ت","حس"],["حس صمیمیتت","حس"],
+["شادی‌ای که می‌دی","حس"],["امیدی که می‌دی","حس"],["لبخندی که میاری","حس"],["قلبی که آروم می‌کنی","حس"],
+["حس قشنگت","حس"],["حال‌وهوات","حس"],["دنیای خودت","حس"],["دنیای متفاوتت","حس"],
+["رنگی که به روزام می‌دی","حس"],["خاطره‌های قشنگت","حس"],["حضور دوست‌داشتنیت","حس"],["تأثیرت روی من","حس"],
+["فکر کردن به تو","حس"],["اسم قشنگت","حس"],["حس شنیدن صدات","حس"],["حس دیدنت","حس"],
+["حس حرف زدن باهات","حس"],["حس خندیدن باهات","حس"],["حس دلتنگی برات","حس"],["حس خوشحالی‌ت","حس"],
+["حس خاص بودن لحظه‌ها","حس"],["حس خوب خاطره‌هات","حس"],["حس نزدیکی قلب‌هامون","حس"],["حس دوست داشتنت","حس"],
+["حس بودنت","حس"],["حس قشنگ اسمت","حس"],["حس مهربونی‌ت","حس"],["حس دلگرمی‌ت","حس"],
+["حس صمیمیت با تو","حس"],["حس آرام گرفتن","حس"],["حس لبخند زدن","حس"],["حس شیرین لحظه‌ها","حس"],
+["حس متفاوت بودن تو","حس"],["حس دوست‌داشتنی بودنت","حس"],["حس حضور تو","حس"],["حس قشنگ کنار تو","حس"],
+["نگاه مهربونت","ظاهر"],["لبخند آرومت","ظاهر"],["چهره‌ی دلنشینت","ظاهر"],["خنده‌ی شیرینت","ظاهر"],
+["قشنگی طبیعی چهره‌ت","ظاهر"],["حالت بامزه‌ت","ظاهر"],["ناز و اداهای قشنگت","ظاهر"],["جذابیت بی‌تکلفت","ظاهر"],
+["قشنگی بی‌ادعات","ظاهر"],["دلبرانه بودنت","ظاهر"],["آراستگی‌ت","ظاهر"],["سلیقه‌ی خاصت","ظاهر"],
+["قشنگی حضورت","ظاهر"],["شیرینی نگاهت","ظاهر"],["لبخند دوست‌داشتنی‌ت","ظاهر"],["حالت خنده‌هات","ظاهر"],
+["دلنشینی چهره‌ت","ظاهر"],["قشنگی لحظه‌ای‌ت","ظاهر"],["جذابیت ساده‌ت","ظاهر"],["قشنگی خودت","ظاهر"],
+["مهربونی با آدم‌ها","شخصیت"],["قدرشناسی‌ت","شخصیت"],["مسئولیت‌پذیریت","شخصیت"],["شجاعتت","شخصیت"],
+["اراده‌ت","شخصیت"],["تلاش کردنت","شخصیت"],["کنجکاویت","شخصیت"],["خلاقیتت","شخصیت"],
+["انعطاف‌پذیریت","شخصیت"],["منصف بودنت","شخصیت"],["حمایتگرت بودنت","شخصیت"],["قابل‌اعتماد بودنت","شخصیت"],
+["قلب مهربونت","شخصیت"],["قابل‌احترام بودنت","شخصیت"],["صداقت رفتارت","شخصیت"],["روحیه‌ت","شخصیت"],
+["خوش‌صحبت بودنت","شخصیت"],["دلگرم‌کننده بودنت","شخصیت"],["خودجوش بودنت","شخصیت"],["دلنشینی اخلاقت","شخصیت"],
+["شیطنت کودکانه‌ت","رفتار"],["خنده‌ی یهویی‌ت","رفتار"],["قهر بامزه‌ت","رفتار"],["آشتی شیرینت","رفتار"],
+["نازهای کوچولوت","رفتار"],["ذوق ساده‌ت","رفتار"],["شوخی‌های ناگهانی‌ت","رفتار"],["حرف‌های شیرینت","رفتار"],
+["توجه‌های کوچیکت","رفتار"],["رفتار صمیمی‌ت","رفتار"],["جواب‌های بامزه‌ت","رفتار"],["حالت‌های مختلفت","رفتار"],
+["وقتی خوشحال می‌شی","رفتار"],["وقتی هیجان‌زده‌ای","رفتار"],["وقتی از چیزی خوشت میاد","رفتار"],["وقتی چیزی رو تعریف می‌کنی","رفتار"],
+["وقتی با ذوق حرف می‌زنی","رفتار"],["وقتی می‌خوای قانعم کنی","رفتار"],["وقتی لجبازی می‌کنی","رفتار"],["وقتی می‌خندی و نمی‌تونی وایسی","رفتار"],
+["خاطره‌ی آشنایی‌مون","حس"],["خاطره‌ی پارک وحدت","حس"],["جوجوی کوچولومون","حس"],["روزهای قشنگمون","حس"],
+["لحظه‌های ساده‌مون","حس"],["حرف‌های بینمون","حس"],["شوخی‌های مشترکمون","حس"],["خنده‌های مشترکمون","حس"],
+["خاطره‌های کوچیکمون","حس"],["حس دوباره حرف زدن","حس"],["دلتنگی بعد از خداحافظی","حس"],["امید به روزهای خوب","حس"],
+["ارزش لحظه‌هامون","حس"],["قشنگی آشنایی‌مون","حس"],["حس دوباره دیدنت","حس"],["ذوق شنیدن خبری ازت","حس"],
+["قشنگی خاطره‌هامون","حس"],["لحظه‌های غیرمنتظره","حس"],["روزهایی که خندیدیم","حس"],["حرف‌هایی که یادم مونده","حس"],
+["مهربونی با من","شخصیت"],["صمیمیت با من","شخصیت"],["شوخی با من","رفتار"],["خنده با من","رفتار"],
+["حرف زدن با من","رفتار"],["توجه به من","رفتار"],["شناختن تو","حس"],["کشف کردن دنیات","حس"],
+["یاد گرفتن از تو","حس"],["دیدن دنیا از نگاه تو","حس"],["شنیدن نظر تو","حس"],["شناختن سلیقه‌ت","حس"],
+["آشنا شدن با علایقت","حس"],["تفاوت‌هامون","حس"],["شباهت‌هامون","حس"],["لحظه‌های غیرقابل‌تکرار","حس"],
+["همه‌ی قشنگی‌هات","ظاهر"],["همه‌ی اخلاق‌هات","شخصیت"],["همه‌ی شیطنت‌هات","رفتار"],["همه‌ی خنده‌هات","ظاهر"],
+["همه‌ی مهربونی‌هات","شخصیت"],["همه‌ی حرف‌هات","رفتار"],["همه‌ی حس‌هات","شخصیت"],["همه‌ی حالت‌هات","رفتار"],
+["همه‌ی سلیقه‌ت","شخصیت"],["همه‌ی تفاوت‌هات","شخصیت"],["همه‌ی ویژگی‌هات","شخصیت"],["همه‌ی جزئیاتت","حس"],
+["همه‌ی چیزهای کوچیکت","حس"],["همه‌ی چیزهای خاصت","حس"],["همه‌ی چیزهای شیرینت","حس"],["همه‌ی لحظه‌های تو","حس"],
+["همه‌ی لبخندت","ظاهر"],["همه‌ی نگاهت","ظاهر"],["همه‌ی حرف زدنت","رفتار"],["همه‌ی وجودت","حس"]
+];
+
+const reasons = rawReasons.slice(0, 300);
+const grid = document.getElementById('reasonsGrid');
+const search = document.getElementById('search');
+const empty = document.getElementById('empty');
+const toast = document.getElementById('toast');
+
+let activeCategory = 'همه';
+let showOnlyDone = false;
+let selected = new Set();
+
+try {
+  selected = new Set(JSON.parse(localStorage.getItem('kianaSelected') || '[]'));
+} catch (e) {
+  selected = new Set();
+}
+
+function faNumber(n) {
+  return Number(n).toLocaleString('fa-IR');
+}
+
+function render() {
+  const query = search.value.trim().toLowerCase();
+  grid.innerHTML = '';
+
+  const filtered = reasons
+    .map((item, index) => ({ item, index }))
+    .filter(({item, index}) => {
+      const categoryMatch = activeCategory === 'همه' || item[1] === activeCategory;
+      const searchMatch = item[0].toLowerCase().includes(query);
+      const doneMatch = !showOnlyDone || selected.has(index);
+      return categoryMatch && searchMatch && doneMatch;
+    });
+
+  filtered.forEach(({item, index}, order) => {
+    const done = selected.has(index);
+    const card = document.createElement('button');
+    card.className = 'reason' + (done ? ' done' : '');
+    card.style.animationDelay = Math.min(order * 0.012, 0.25) + 's';
+    card.setAttribute('aria-pressed', String(done));
+    card.innerHTML = `
+      <span class="number">♡ ${faNumber(index + 1)}</span>
+      <span class="word"></span>
+      <span class="mark">${done ? '♥ انتخاب شد' : '♡ برای تو'}</span>
+    `;
+    card.querySelector('.word').textContent = item[0];
+
+    card.addEventListener('click', () => {
+      if (selected.has(index)) {
+        selected.delete(index);
+      } else {
+        selected.add(index);
+        toast.classList.add('show');
+        clearTimeout(window.toastTimer);
+        window.toastTimer = setTimeout(() => toast.classList.remove('show'), 1600);
+      }
+
+      try {
+        localStorage.setItem('kianaSelected', JSON.stringify([...selected]));
+      } catch (e) {}
+
+      updateProgress();
+      render();
+    });
+
+    grid.appendChild(card);
+  });
+
+  empty.style.display = filtered.length ? 'none' : 'block';
+}
+
+function updateProgress() {
+  const count = selected.size;
+  const percentage = Math.round(count / reasons.length * 100);
+
+  document.getElementById('doneCount').textContent = faNumber(count);
+  document.getElementById('percent').textContent = faNumber(percentage) + '٪';
+  document.getElementById('progressText').textContent =
+    faNumber(count) + ' از ' + faNumber(reasons.length);
+  document.getElementById('progressBar').style.width = percentage + '%';
+}
+
+document.getElementById('filters').addEventListener('click', event => {
+  const button = event.target.closest('[data-category]');
+  if (!button) return;
+
+  activeCategory = button.dataset.category;
+
+  document.querySelectorAll('.filter').forEach(item => {
+    item.classList.toggle('active', item === button);
+  });
+
+  render();
+});
+
+search.addEventListener('input', render);
+
+document.getElementById('showAll').addEventListener('click', () => {
+  showOnlyDone = false;
+  activeCategory = 'همه';
+  search.value = '';
+
+  document.querySelectorAll('.filter').forEach(item => {
+    item.classList.toggle('active', item.dataset.category === 'همه');
+  });
+
+  render();
+});
+
+document.getElementById('showDone').addEventListener('click', () => {
+  showOnlyDone = !showOnlyDone;
+  document.getElementById('showDone').textContent =
+    showOnlyDone ? 'نمایش همه‌ی دلیل‌ها' : 'انتخاب‌شده‌ها';
+  render();
+});
+
+function createHearts() {
+  const container = document.getElementById('particles');
+  const symbols = ['♡', '♥', '✧', '♡'];
+
+  for (let i = 0; i < 24; i++) {
+    const heart = document.createElement('span');
+    heart.className = 'heart';
+    heart.textContent = symbols[Math.floor(Math.random() * symbols.length)];
+    heart.style.left = Math.random() * 100 + '%';
+    heart.style.fontSize = (12 + Math.random() * 22) + 'px';
+    heart.style.animationDuration = (12 + Math.random() * 18) + 's';
+    heart.style.animationDelay = (-Math.random() * 25) + 's';
+    container.appendChild(heart);
+  }
+}
+
+createHearts();
+updateProgress();
+render();
+</script>
+</body>
+</html>
